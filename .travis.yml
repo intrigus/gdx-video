@@ -22,8 +22,10 @@ addons:
     - binutils-mingw-w64-i686
     - binutils-mingw-w64-x86-64
 before_install:
+  - rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
   - brew update
   - brew outdated ant || brew upgrade ant
+  - ant -version
   - ant -f gdx-video-desktop/jni/build.xml
 deploy:
   provider: releases
