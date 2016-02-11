@@ -21,8 +21,10 @@ addons:
     - g++-mingw-w64-x86-64
     - binutils-mingw-w64-i686
     - binutils-mingw-w64-x86-64
-
-before_install: ant -f gdx-video-desktop/jni/build.xml
+before_install:
+  - brew update
+  - brew outdated ant || brew upgrade ant
+  - ant -f gdx-video-desktop/jni/build.xml
 deploy:
   provider: releases
   api_key: $T
