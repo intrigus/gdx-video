@@ -23,6 +23,6 @@ addons:
 before_install: ant -f gdx-video-desktop/jni/build.xml
 deploy:
   provider: releases
-  api_key: T
+  api_key: $T
   file: "gdx-video-desktop/libs/gdx-video-desktop-natives.jar"
   skip_cleanup: true
