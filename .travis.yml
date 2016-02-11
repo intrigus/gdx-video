@@ -26,3 +26,5 @@ deploy:
   api_key: $T
   file: "gdx-video-desktop/libs/gdx-video-desktop-natives.jar"
   skip_cleanup: true
+  on:
+    tags: true
