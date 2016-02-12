@@ -29,8 +29,10 @@ before_install:
   #- rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
   #- brew update
   #- brew outdated ant || brew upgrade ant
+  - ls
+  - cd apache-ant-1.9.6-bin
   - ./ant -version
-  - ./ant -f gdx-video-desktop/jni/build.xml
+  - ./ant -f ../gdx-video-desktop/jni/build.xml
 deploy:
   provider: releases
   api_key: $T
