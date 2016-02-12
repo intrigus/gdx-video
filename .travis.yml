@@ -23,14 +23,14 @@ addons:
     - binutils-mingw-w64-x86-64
 before_install:
   - curl http://apache.openmirror.de//ant/binaries/apache-ant-1.9.6-bin.tar.gz | tar -xz
-  - sudo mkdir -p /usr/local
-  - sudo cp -rf apache-ant-1.9.6-bin /usr/local/apache-ant
-  - export PATH=/usr/local/apache-ant/bin:"$PATH"
+  #- sudo mkdir -p /usr/local
+  #- sudo cp -rf apache-ant-1.9.6-bin /usr/local/apache-ant
+  #- export PATH=/usr/local/apache-ant/bin:"$PATH"
   #- rm -rf /usr/local/Cellar /usr/local/.git && brew cleanup
   #- brew update
   #- brew outdated ant || brew upgrade ant
-  - ant -version
-  - ant -f gdx-video-desktop/jni/build.xml
+  - ./ant -version
+  - ./ant -f gdx-video-desktop/jni/build.xml
 deploy:
   provider: releases
   api_key: $T
