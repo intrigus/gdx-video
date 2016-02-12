@@ -4,6 +4,8 @@
         <ant antfile="build-ffmpeg-linux64.xml" target="clean"/>
         <ant antfile="build-ffmpeg-windows32.xml" target="clean"/>
         <ant antfile="build-ffmpeg-windows64.xml" target="clean"/>
+        <ant antfile="build-ffmpeg-macosx32.xml" target="clean"/>
+        <ant antfile="build-ffmpeg-macosx64.xml" target="clean"/>
 
     </target>
 
@@ -18,6 +20,8 @@
         <ant antfile="build-ffmpeg-linux64.xml"/>
         <ant antfile="build-ffmpeg-windows32.xml"/>
         <ant antfile="build-ffmpeg-windows64.xml"/>
+        <ant antfile="build-ffmpeg-macosx32.xml" target="clean"/>
+        <ant antfile="build-ffmpeg-macosx64.xml" target="clean"/>
     </target>
 
     <target name="all" depends="compile-natives"/>
