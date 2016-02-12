@@ -23,7 +23,8 @@ sudo: required
     #- binutils-mingw-w64-x86-64
 before_install:
   - brew update
-  - brew outdated yasm || brew upgrade yasm
+  - brew install automake fdk-aac lame libass libtool libvorbis libvpx opus sdl shtool texi2html theora wget x264 xvid yasm
+  - yasm --version
   - curl http://apache.openmirror.de//ant/binaries/apache-ant-1.9.6-bin.tar.gz | tar -xz
   - sudo mkdir -p /usr/local
   - sudo cp -rf apache-ant-1.9.6 /usr/local/apache-ant
